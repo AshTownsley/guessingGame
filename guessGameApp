@@ -9,13 +9,18 @@ public class guessGameApp {
 		game.displayWelcomeMessage();
 		game.generateNumberToBeGuessed();
 		
-		game.displayPleaseGuessMessage();
-		game.makeGuess();
+		boolean isCorrect = false;
 		
-		if (game.isCorrectGuess()) {
-			System.out.println("Congratulations! You guessed the correct number!");
-		} else {
-			System.out.println("Try to guess again!");
+		while (!isCorrect) {
+			game.displayPleaseGuessMessage();
+			game.makeGuess();
+		
+			if (game.isCorrectGuess()) {
+				game.displayCorrectGuessMessage();
+				isCorrect = true;
+			} else {
+				game.displayGuessAgainMessage();
+			}
 		}
 	}
 
