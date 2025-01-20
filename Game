@@ -19,7 +19,7 @@ public class Game {
 	public void generateNumberToBeGuessed() {
 		Random random = new Random();
 		number = random.nextInt(100) + 1; //generates number
-		System.out.println("A number has been generated."); //debug message
+		System.out.println("A number has been generated." + number); //debug message
 	}
 	
 	public void displayPleaseGuessMessage() {
@@ -33,5 +33,13 @@ public class Game {
 	
 	public boolean isCorrectGuess() {
 		return guessNumber == number;
+	}
+	
+	public void displayGuessAgainMessage() {
+		System.out.println("Incorrect, please try again.");
+	}
+	
+	public void displayCorrectGuessMessage() {
+		System.out.println("Congratulations! You guessed the correct number.");
 	}
 }
