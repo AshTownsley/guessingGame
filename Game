@@ -1,4 +1,5 @@
 package guessingGame;
+import java.util.Random;
 
 public class Game {
 
@@ -12,4 +13,13 @@ public class Game {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("Try to guess the correct number!");
 	}
-}
+	
+	//generate number method
+	public void generateNumberToBeGuessed() {
+		Random random = new Random();
+		number = random.nextInt(100) + 1; //generates number
+		System.out.println("A number has been generated."); //debug message
+	}
+	
+		
+	}
