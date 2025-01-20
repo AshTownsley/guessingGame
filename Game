@@ -2,17 +2,14 @@ package guessingGame;
 
 public class Game {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-			private int number; //random number between 1 and 100
-			private int guessNumber; //store user's guess
-			private int counter; //total guesses so far
-			
-			public void displayWelcomeMessage() {
-				System.out.println("Welcome to the Guessing Game!");
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-				System.out.println("Try to guess the correct number!")
-			}
+	private int number; //random number between 1 and 100
+	private int guessNumber; //store user's guess
+	private int counter; //total guesses so far
+	
+	//display welcome message method
+	public void displayWelcomeMessage() {
+		System.out.println("Welcome to the Guessing Game!");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("Try to guess the correct number!");
 	}
-
 }
