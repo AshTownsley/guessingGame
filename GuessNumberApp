@@ -1,0 +1,46 @@
+package guessingGame;
+
+import java.util.Scanner;
+
+public class GuessNumberApp {
+	
+	public static void main(String[] args) {
+		Game game = new Game();
+		Scanner scanner = new Scanner(System.in);
+				
+		game.displayWelcomeMessage();
+		
+		boolean playAgain = true;
+		
+		while (playAgain) {
+			game.generateNumberToBeGuessed();
+			
+			boolean correctGuess = false;
+			
+			while (!correctGuess) {
+				game.displayPleaseGuessMessage();
+				
+				System.out.print("Enter a number between 1 and 100: ");
+				game.makeGuess();
+				
+				if (game.isCorrectGuess()) {
+					game.displayCorrectGuessMessage();
+					correctGuess = true;
+					
+				} else {
+					game.displayGuessAgainMessage();
+				}
+			}
+			
+			System.out.println("Do you want to play again? (y/n): ");
+			String userInput = scanner.next();
+			
+			if (userInput.equalsIgnoreCase("n")) {
+				playAgain = false;
+				System.out.println("Thanks for playing! Goodbye.");
+			}
+		}
+		scanner.close();
+	}
+
+}
