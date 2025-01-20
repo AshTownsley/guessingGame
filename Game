@@ -19,11 +19,11 @@ public class Game {
 	public void generateNumberToBeGuessed() {
 		Random random = new Random();
 		number = random.nextInt(100) + 1; //generates number
-		System.out.println("A number has been generated." + number); //debug message
+		System.out.println("A number has been generated." + number); //debug message comment out in final draft
 	}
 	
 	public void displayPleaseGuessMessage() {
-		System.out.println("Please enter your guess between 1 and 100: ");
+		System.out.println("Please enter your guess.");
 	}
 	//ask for input
 	public void makeGuess() {
