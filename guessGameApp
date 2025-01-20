@@ -8,6 +8,15 @@ public class guessGameApp {
 		
 		game.displayWelcomeMessage();
 		game.generateNumberToBeGuessed();
+		
+		game.displayPleaseGuessMessage();
+		game.makeGuess();
+		
+		if (game.isCorrectGuess()) {
+			System.out.println("Congratulations! You guessed the correct number!");
+		} else {
+			System.out.println("Try to guess again!");
+		}
 	}
 
 }
